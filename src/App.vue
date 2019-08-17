@@ -9,7 +9,7 @@
       >
       <a v-if="auth" class="logout" @click="logout">Logout</a>
     </div>
-    <div v-if="error" @click="clearError" class="error">{{ error }}</div>
+    <div v-if="error" @click="clearError" class="error">{{ error }}(click here to dismiss)</div>
     <router-view />
   </div>
 </template>
@@ -58,7 +58,9 @@ export default {
   color: gold;
 }
 .error {
-  background-color: rosybrown;
+  background-color:black;
   padding: 20px;
+  color:gold;
+  cursor: pointer;
 }
 </style>
